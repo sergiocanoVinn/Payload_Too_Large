@@ -1,6 +1,6 @@
 const { exec } = require('child_process');
 
-const runVtexLink = () => {
+const VtexLink = () => {
     console.log('Ejecutando vtex link...');
     
     const child = exec('vtex link');
@@ -12,9 +12,9 @@ const runVtexLink = () => {
         console.log(`Proceso finalizado con código ${code}`);
 
         if (code !== 0) {
-            setTimeout(runVtexLink, 2000);
+            setTimeout(VtexLink, 2000);
         }
     });
 }
 
-runVtexLink();
+VtexLink();
